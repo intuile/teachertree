@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="renderer" content="webkit">
+	<title>Login</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="teachers,tree,Login ,Sign up ,Registration " . />
+	<meta name="description" content="this is teached-tree system login performence">
+	<meta name="robots" content="none">
+	<!-- mobile devices surport-->
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="email=no">
+	<meta name="handheldfriendly" content="true">
+	<!--per 300 seconds refresh the web-->
+	<meta http-equiv="refresh" content="300">
+	<link rel="stylesheet" href="../static/css/bootstrap.css">
+	<script src="../static/js/jquery.js"></script>
+	<script src="../static/js/bootstrap.js"></script>
+	<script src="../static/js/login.js"></script>
+	<script
+		type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0);  }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<link href="../static/css/style.css" rel='stylesheet' type='text/css' />
+</head>
+
+
+
+<body>
+	<h1>system login</h1>
+	<div class="app-location">
+		<h2>Welcome to Tree</h2>
+		<div class="line"><span></span></div>
+		<div class="location"><img src="../static/trees.ico" class="img-responsive" alt="" style="margin: 0 auto;">
+		</div>
+
+		<form name="form1" method="POST">
+			{{ form.csrf_token }}
+			<input type="text" class="text" name="account" id="reg00">
+			<input type="password" name="password" id="reg01">
+			<div class="submit"><input type="submit" name="submit" value="Sign"></div>
+			<div class="clear"></div>
+			<div class="new">
+				<h3><a href="./forget_password" name="forget">Forgot password ?</a></h3>
+				<h4><a href="./register.html" name="register" data-toggle="modal" data-target="#myModal">New here ? Sign Up</a></h4>
+				<!-- data-toggle:使用bootstrap的modal类型;  data-target:让href与modal绑定起来 -->
+			</div>
+			<br> {{ account }}
+			<br> {{ num }}
+			<br> {{ password }}
+			<br> {{ user }}
+			<br> {{ btn }}
+		</form>
+	</div>
+
+
+	
+	<!-- 获得get_flashed_messages的错误消息 -->
+	{% with messages = get_flashed_messages() %}
+		
+		{% if messages %}
+		<script>
+			$(document).ready(function(){
+				$("#myM").modal("show")
+			})
+		</script> 
+
+			<div class="modal fade " id="myM" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<!-- 模版内容 -->
+						<div class="modal-header">
+							<!-- 决定标题和右上角关闭 -->
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+								<!-- 关闭 -->
+								&times;
+							</button>
+						</div>
+						<div class="modal-body" >
+							<div><label> {{ messages }} </label></div>
+						</div>
+		
+						<!-- 返回地址 -->                
+						<div class="modal-footer">
+							<!-- a用于定义超链接,URL:统一资源定位符,互联网上得到的资源的位置和访问方法的一种简洁的表示,用于网络 -->
+							<!-- 主机作为服务器,相当于是网络的一部分,URL地址=主机地址+内部资源定位;  -->
+							<!-- <p>绝对路径 URL: <a href="//www.runoob.com/">菜鸟教程</a></p>
+								<p>相对路径 URL: <a href="tag_a.php">a 标签</a></p>  -->
+							<a href="./login">   
+								<button>back</button>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		{% endif %}
+	{% endwith %}
+
+
+
+	<form name="form2" method="POST"  onsubmit="return validateForm()">
+		{{ form.csrf_token }}
+		<!-- 模态框 -->
+		<div class="modal fade "  id="myModal"  tabindex="-1"  role="dialog"  aria-labelledby="myModalLabel"   aria-hidden="true" >
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<!-- 模版内容 -->
+					<div class="modal-header">
+						<!-- 决定标题和右上角关闭 -->
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+							<!-- 关闭 -->
+							&times;
+						</button>
+						<h4 class="modal-title" id="myModalLabel">
+							<!-- 调整 -->
+							Regist
+						</h4>
+					</div>
+
+					<div class="modal-body" >
+						<!-- 实体,定义输入框 -->
+						<div class="regdiv">
+							<label class="lab"> Password: </label>
+							<input type="password" name="reg_password1" id="reg_password1">
+						</div>
+						<div class="regdiv">
+							<label class="lab"> Reassure: </label>
+							<input type="password" name="reg_password2" id="reg_password2">
+						</div>
+						<div class="regdiv">
+							<label class="lab"> Identify: </label>
+							<input type="text" name="reg_id" id="reg_id">
+						</div>
+						<div class="regdiv">
+							<label id="lab4"> <span class="red"><strong>
+										Password and ID can be character or number<br>
+										Both are longer than 5 an shorter than 17</strong></span>
+							</label>
+						</div>
+					</div>
+
+					<div class="modal-footer">
+						<div><input type="submit"  name="reg_btn" value="submit"></div>  
+					</div>
+					
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal -->
+		</div>
+	</form>
+</body>
+
+</html>

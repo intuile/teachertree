@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <title>Delete</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="teachers,tree,Login ,Sign up ,Registration " . />
+    <meta name="description" content="this is teached-tree system login performence">
+    <meta name="robots" content="none">
+    <!-- mobile devices surport-->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="handheldfriendly" content="true">
+    <!--per 300 seconds refresh the web-->
+    <meta http-equiv="refresh" content="300">
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/index.js"></script>
+    <script
+        type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0);  }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    </script>
+    <link href="../static/css/forget_password.css" rel='stylesheet' type='text/css' />
+</head>
+
+<body>
+    <h1>Delete </h1>
+    <div class="app-location">
+        <h2>Delete Account </h2>
+        <div class="line"><span></span></div>
+        <!--<div class="location"><img src="../static/location.png" class="img-responsive" alt="" ></div>-->
+        <form method="POST">
+            {{ form.csrf_token }}
+            <div id="boder">
+                <div class="forget"><label class="lab"><strong><span class="red">ACCOUNT</span></strong></label><input
+                        type="text" class="text" value="Account" name="account" id="reg00" onfocus="this.value = '';"
+                        onblur="if (this.value == '') {this.value = 'Account';}"></div>
+
+                <div class="submit"><input type="submit" name="submit" onclick="myFunction()" value="Delete"></div>
+                <div class="clear"></div>
+                <div class="new">
+                </div>
+        </form>
+    </div>
+
+
+    
+    <!-- 获得get_flashed_messages的错误消息 -->
+    {% with messages = get_flashed_messages() %}
+
+    {% if messages %}
+    <script>
+        $(document).ready(function () {
+            $("#myM").modal("show")
+        })
+    </script>
+
+    <div class="modal fade " id="myM" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- 模版内容 -->
+                <div class="modal-header">
+                    <!-- 决定标题和右上角关闭 -->
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        <!-- 关闭 -->
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div><label> {{ messages }} </label></div>
+                </div>
+
+                <!-- 返回地址 -->
+                <div class="modal-footer">
+                    <!-- a用于定义超链接,URL:统一资源定位符,互联网上得到的资源的位置和访问方法的一种简洁的表示,用于网络 -->
+                    <!-- 主机作为服务器,相当于是网络的一部分,URL地址=主机地址+内部资源定位;  -->
+                    <!-- <p>绝对路径 URL: <a href="//www.runoob.com/">菜鸟教程</a></p>
+                            <p>相对路径 URL: <a href="tag_a.php">a 标签</a></p>  -->
+                    <a href="./">
+                        <button>back</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% endwith %}
+
+
+
+    <noscript>
+
+        <p><strong>本页面需要浏览器支持（启用）javascript脚本。</strong></p>
+
+        </nosript>
+</body>
+
+</html>

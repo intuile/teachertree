@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Account</title>
+    <!--per 300 seconds refresh the web-->
+    <meta http-equiv="refresh" content="300">
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <script src="../static/js/jquery.js"></script>
+    <script src="../static/js/bootstrap.js"></script>
+    <link href="../static/css/style.css" rel='stylesheet' type='text/css' />
+    <script>
+        $(document).ready(function(){
+            $("#myModal").modal("show")
+        })
+    </script> 
+       
+</head>
+
+
+
+<body>
+
+    <div class="modal fade " id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- 模版内容 -->
+                <div class="modal-header">
+                    <!-- 决定标题和右上角关闭 -->
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        <!-- 关闭 -->
+                        &times;
+                    </button>
+                </div>
+
+                <div class="modal-body" >
+                    <div><label> Your account is: {{ account }} </label></div>
+                </div>
+
+                <!-- 返回地址 -->                
+                <div class="modal-footer">
+                    <!-- a用于定义超链接,URL:统一资源定位符,互联网上得到的资源的位置和访问方法的一种简洁的表示,用于网络 -->
+                    <!-- 主机作为服务器,相当于是网络的一部分,URL地址=主机地址+内部资源定位;  -->
+                    <!-- <p>绝对路径 URL: <a href="//www.runoob.com/">菜鸟教程</a></p>
+                         <p>相对路径 URL: <a href="tag_a.php">a 标签</a></p>  -->
+                    <a href="../login">
+                        <button>back</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

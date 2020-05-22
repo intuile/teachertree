@@ -1,0 +1,350 @@
+/*@charset "utf-8";
+html,body{
+    background: url(background1.jpg) no-repeat;
+    height:100%;
+}   body{
+    background:url(background1.jpg)center center;
+    background-size: cover;
+    position: relative;
+}
+    h1{
+        margin: 0;
+        color:gold;
+        text-transform:uppercase;
+        font-size: 4em;
+        background:gray;
+        line-height: 1em;
+        text-align: center;
+    }
+    h2{
+        text-transform: uppercase;
+    }
+    
+    p.tip{
+        color:#f81111;
+    }
+    li:first-child{
+        color: red;
+        text-transform: uppercase;
+    }
+    li:nth-child(2){
+        color:yellow;
+        text-transform: uppercase;
+    }
+    li:nth-child(3){
+        color:blue;
+        text-transform: uppercase;
+    }
+    li:last-child{
+        color:green;
+        text-transform: uppercase;
+        clear: right;
+    }
+    /*span.red{
+        color:red;
+        
+    }
+    
+    span.yellow{
+        color:yellow;
+        text-transform: uppercase;
+    }
+    span.blue{
+        color:blue;
+        text-transform: uppercase;
+    }
+    span.green{
+        
+    }
+    
+    ul{
+        border: 5px solid #fff;
+        margin: 0;
+        padding: 0;
+        
+    }
+    li:hover{
+        background-color: black;
+    }
+    li{
+        border: solid white 10px;
+        margin-right: 10px;
+        list-style: none;
+        padding: 15px;
+        margin: 5px 0;
+        text-indent: 35px;
+        background: url(timg2.jpg) no-repeat 10px 50%;
+        float: left;
+    }
+    #leftSection , #rightSection{
+        float:left;/*If there is very little space above a row for floating elements, 
+        the element jumps to the next row, and the process continues until a row has enough space.
+        width:38em;
+        height:33em;
+       
+
+       ;/*  clear:both 
+    }
+    #leftSection  h2, #rightSection h2{
+        width: 32.5em;
+        
+    }
+    section{
+        border: 5px solid #fff;
+    }
+    aside{
+        border:  solid white;
+        border-width: 5px 5px 5px 5px;
+        height: 33em;
+        float: right;
+        
+    }
+    #bottom{
+        position: relative;
+        
+    }
+    #copyright{
+       
+        
+        float: left;
+        position: absolute;
+        width: 94em;
+        
+    }
+    #copyrightWords{ 
+        text-transform: uppercase;
+        text-align: center;
+        background:lightblue;
+        padding: 5px;
+        display: block;
+    }
+
+    th{
+        position: absolute;
+        font-size:1.5em;
+        color:blue;
+        
+    }*/
+    @charset "utf-8";
+    html,body{
+        background: url(../background2.jpg);
+   /* background: url(background1.jpg) no-repeat;*/
+    height:100%;
+   
+}   body{
+    background: url(../background2.jpg);
+    /*background:url(background1.jpg)center center;*/
+    background-size: cover;
+    margin:0%;
+    padding:0%;
+    position: relative;
+}
+    header{
+        margin:0%;
+        padding: 0%;
+    }
+    ul{
+        border: 0.5% solid #fff;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        
+    }
+    li:hover{
+        background-color: lightblue;
+    }
+    li{
+        font-size:200%;
+        width:20%;
+        border: solid white 2%;
+        margin-right: 2%;
+        list-style: none;
+        padding: 1%;
+        margin: 0.3% 0;
+        text-indent: 1%;
+        background: url(../timg2.jpg) no-repeat 0.1% 50%;
+        float: left;
+    }
+        li:first-child{
+            color: red;
+            text-transform: uppercase;
+        }
+        li:nth-child(2){
+            color:yellow;
+            text-transform: uppercase;
+        }
+        li:nth-child(3){
+            color:blue;
+            text-transform: uppercase;
+        }
+        li:last-child{
+            color:green;
+            text-transform: uppercase;
+            clear: right;
+        }
+       #toptop{
+          width: 10%;
+          float: left;
+          height: 10.6%
+       }
+    h1{
+        
+       
+        width: 90%;
+        float: left;
+        margin: 0;
+        color:gold;
+        text-transform:uppercase;
+        font-size: 400%;
+        background:gray;
+        line-height: 100%;
+        text-align: center;
+    }
+    h2{
+        text-transform: uppercase;
+    }
+    
+    p.tip{
+        color:#f81111;
+    }
+    span.red{
+        color:red;
+    }
+    span.yellow{
+        color:yellow;
+    }
+    span.blue{
+        color:blue;
+    }
+    span.green{
+        color:green;
+    }
+    ul{
+        border: 5px solid #fff;
+    }
+    #scroll{
+        width: 100%;
+        height: 80%;
+        margin: 0,0,0,0;
+        padding: 0%;
+        overflow: auto;
+        display: block;
+    }
+    
+    #leftSection , #rightSection{
+        float:left;/*If there is very little space above a row for floating elements, 
+        the element jumps to the next row, and the process continues until a row has enough space.*/
+        width:43%;
+        height: 75%;
+       /* text-align: center;*/
+       /*  clear:both */
+    }
+    #leftSection  h2, #rightSection h2{
+        width: 32.5em;
+        
+    }
+    section{
+        border: 5px solid #fff;
+    }
+    aside{
+       padding:0%;
+      margin: 0%;
+        height:97%;
+        text-align: center;
+        
+        
+      
+    }
+    #readme{
+        height:80%;
+        width:12%;
+        float: right;
+        background: url(../timg.jpg) no-repeat;
+        background-size: cover;
+    }
+    #bottom{
+        position: relative;
+        height: 5%;
+        
+    }
+    #copyright{
+        
+      float:left;
+        position: absolute;
+        width: 100%;
+        
+    }
+    #copyrightWords{
+        text-transform: uppercase;
+        font-size:100%;
+        text-align: center;
+        background:lightblue;
+        padding: 5px;
+     
+    }
+    .tip{
+        font-size: 100%;
+    }
+    #readme{
+        font-size: 100%;
+    }
+    #time{
+        font-size: 100%;
+    }
+    #time1{
+        font-size: 100%;
+    }
+    form{
+        
+        float: right;
+        width: 10%;
+        border:0;
+        margin: 0;
+       position: absolute;
+       height: 10.5%;
+     
+    }
+    #logout{
+        height: 185%;
+        font-size: 100%;  
+        text-align: center;
+        color: #fff;
+        cursor: pointer;
+        outline: none;
+        border: 0;
+        width:100%;
+        background: gray;
+    }
+    #search{
+        height: 270%;
+        font-size: 100%;  
+        text-align: center;
+        color: #fff;
+        cursor: pointer;
+        outline: none;
+        border: 0;
+        width:100%;
+        background: gray;
+    }
+    
+    input[type="submit"]{
+        height: 100%;
+        font-size: 30%;  
+        text-align: center;
+        color: #fff;
+        cursor: pointer;
+        outline: none;
+        border: 0;
+        width:100%;
+        background: gray;
+        
+      }
+      /*input[type="submit"]:hover{
+        background:none;
+      
+        color: #0bd38a;
+      
+      }*/
+      #clear{
+          clear: both;
+      }
